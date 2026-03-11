@@ -35,7 +35,8 @@ const ContactPage = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const res = await fetch("https://ecommerce-1-zz8i.onrender.com/api/contact", {
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -78,17 +79,17 @@ const ContactPage = () => {
           <div
             style={{
               marginBottom: "1rem",
-              color: status.type === "error" ? "#ff6b6b" : "#00f5c3",
+              color: status.type === "error" ? "#000000" : "#000000",
               fontWeight: "bold",
               textAlign: "center",
               padding: "1rem",
               borderRadius: "8px",
               backgroundColor:
                 status.type === "error"
-                  ? "rgba(255, 107, 107, 0.1)"
-                  : "rgba(0, 245, 195, 0.1)",
+                  ? "#ffffff"
+                  : "#ffffff",
               border: `1px solid ${
-                status.type === "error" ? "#ff6b6b" : "#00f5c3"
+                status.type === "error" ? "#000000" : "#000000"
               }`,
             }}
           >
@@ -152,15 +153,15 @@ const styles = {
     alignItems: "center",
     padding: "2rem",
     background:
-      "linear-gradient(135deg, var(--bg-primary), var(--bg-secondary))",
+      "#ffffff",
     fontFamily: "Segoe UI, sans-serif",
   },
   container: {
     backdropFilter: "blur(16px)",
-    background: "rgba(255, 255, 255, 0.05)",
-    border: "1px solid rgba(255, 255, 255, 0.15)",
+    background: "#ffffff",
+    border: "1px solid #000000",
     borderRadius: "20px",
-    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
+    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
     padding: "2.5rem",
     maxWidth: "500px",
     width: "100%",

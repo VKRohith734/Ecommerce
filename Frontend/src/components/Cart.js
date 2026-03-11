@@ -19,7 +19,7 @@ const Cart = () => {
   };
 
   const API_CONFIG = {
-    BASE_URL: "https://ecommerce-1-zz8i.onrender.com",
+    BASE_URL: process.env.REACT_APP_API_URL || "http://localhost:3002",
     CART: "/api/cart",
     AUTH: "/api/auth",
     PRODUCTS: "/api/products",
@@ -333,8 +333,8 @@ const clearCart = async () => {
       {cartItems.length === 0 ? (
         <div className="cp-empty" style={styles.empty}>
           <svg width="84" height="84" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path d="M3 6h18M5 6l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13" stroke="#9fbadf" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M9 10v6M15 10v6" stroke="#9fbadf" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M3 6h18M5 6l1 13a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-13" stroke="#000000" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M9 10v6M15 10v6" stroke="#000000" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <h3>Your cart is empty!</h3>
           <p className="muted">Add products to your cart. We saved some great picks for you.</p>
@@ -423,9 +423,9 @@ const clearCart = async () => {
 // --- styles object kept (variable name preserved) ---
 const styles = {
   page: {
-    background: "linear-gradient(135deg, #0f1724 0%, #1e3c72 60%)",
-    backgroundColor: "#0b0f14",
-    color: "#eaf6ff",
+    background: "#ffffff",
+    backgroundColor: "#ffffff",
+    color: "#000000",
     minHeight: "100vh",
     padding: "2rem",
     fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
@@ -433,13 +433,13 @@ const styles = {
   },
   heading: {
     fontSize: "2.2rem",
-    color: "#e7fbff",
+    color: "#000000",
     margin: 0,
-    textShadow: "0 6px 18px rgba(0,0,0,0.6)",
+    textShadow: "none",
   },
   empty: {
     textAlign: "center",
-    color: "#bfcbd6",
+    color: "#333333",
     marginTop: 36,
     padding: 20,
   },
@@ -452,12 +452,12 @@ const styles = {
   card: {
     display: "flex",
     flexDirection: "column",
-    background: "rgba(255, 255, 255, 0.02)",
+    background: "#ffffff",
     borderRadius: "12px",
     overflow: "hidden",
-    border: "1px solid rgba(255, 255, 255, 0.04)",
+    border: "1px solid #000000",
     transition: "transform 0.2s",
-    boxShadow: "0 6px 24px rgba(2,6,23,0.6)",
+    boxShadow: "0 6px 24px rgba(0,0,0,0.1)",
   },
   image: {
     width: "100%",
@@ -478,11 +478,11 @@ const styles = {
     fontSize: "1.05rem",
     fontWeight: "700",
     marginBottom: "0.25rem",
-    color: "#fff",
+    color: "#000000",
   },
   price: {
     fontSize: "1.1rem",
-    color: "#00d0ff",
+    color: "#000000",
     fontWeight: "700",
   },
   quantityControls: {
@@ -495,9 +495,9 @@ const styles = {
     width: "36px",
     height: "36px",
     borderRadius: "50%",
-    border: "none",
-    background: "rgba(255,255,255,0.06)",
-    color: "#fff",
+    border: "1px solid #000000",
+    background: "#ffffff",
+    color: "#000000",
     fontSize: "1.2rem",
     display: "flex",
     alignItems: "center",
@@ -515,35 +515,35 @@ const styles = {
     marginTop: "auto",
     padding: "0.6rem",
     borderRadius: "8px",
-    border: "none",
-    background: "rgba(255, 59, 59, 0.85)",
-    color: "white",
+    border: "1px solid #000000",
+    background: "#ffffff",
+    color: "#000000",
     fontWeight: "600",
     cursor: "pointer",
     transition: "background 0.2s",
   },
   totalContainer: {
-    background: "rgba(255,255,255,0.02)",
+    background: "#ffffff",
     borderRadius: "12px",
     padding: "1rem",
     marginTop: "1rem",
     display: "flex",
     flexDirection: "column",
     gap: "0.6rem",
-    border: "1px solid rgba(255,255,255,0.04)",
+    border: "1px solid #000000",
   },
   total: {
     fontSize: "1.2rem",
-    color: "#fff",
+    color: "#000000",
     textAlign: "center",
     marginBottom: "0",
   },
   clearBtn: {
     padding: "0.8rem",
     borderRadius: "8px",
-    border: "none",
-    background: "rgba(255,255,255,0.05)",
-    color: "white",
+    border: "1px solid #000000",
+    background: "#ffffff",
+    color: "#000000",
     fontWeight: "700",
     fontSize: "1rem",
     cursor: "pointer",
@@ -551,16 +551,16 @@ const styles = {
 };
 
 const componentCss = `
-.cp-root { --accent: #00d0ff; }
+.cp-root { --accent: #000000; }
 .cp-hero { display:flex; justify-content:space-between; align-items:center; gap:12px }
-.cp-sub { color: rgba(255,255,255,0.65); margin:4px 0 0 }
+.cp-sub { color: #333333; margin:4px 0 0 }
 .cp-actions { display:flex; gap:8px }
-.btn{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--accent);cursor:pointer;font-weight:700}
-.btn.primary{background:linear-gradient(90deg,#00c3ff,#3a7bd5);color:#042b40;border:none;box-shadow:0 6px 18px rgba(58,123,213,0.14)}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#cfefff}
-.btn.glass{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+.btn{padding:8px 12px;border-radius:10px;border:1px solid #000000;background:transparent;color:var(--accent);cursor:pointer;font-weight:700}
+.btn.primary{background:#000000;color:#ffffff;border:none;box-shadow:none}
+.btn.ghost{background:transparent;border:1px solid #000000;color:#000000}
+.btn.glass{background:#ffffff;}
 
-.cp-empty{display:flex;flex-direction:column;align-items:center;gap:8px;padding:28px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005))}
+.cp-empty{display:flex;flex-direction:column;align-items:center;gap:8px;padding:28px;border-radius:12px;border:1px solid #000000;background:#ffffff}
 .muted{color:rgba(255,255,255,0.65)}
 .small{font-size:13px}
 
@@ -568,7 +568,7 @@ const componentCss = `
 @media (max-width:900px){ .cp-grid{grid-template-columns:1fr} }
 
 .cp-list{display:flex;flex-direction:column;gap:14px}
-.cp-card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+.cp-card{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:#ffffff;border:1px solid #000000}
 .cp-img{width:160px;height:120px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,0.02);padding:8px}
 .cp-meta{flex:1;display:flex;flex-direction:column;gap:8px}
 .cp-top{display:flex;justify-content:space-between;align-items:flex-start}
@@ -586,7 +586,7 @@ const componentCss = `
 .cp-footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .cp-footer-actions{display:flex;gap:8px}
 
-.cp-aside .cp-summary{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.03)}
+.cp-aside .cp-summary{padding:16px;border-radius:12px;background:#ffffff;border:1px solid #000000}
 .total-line{display:flex;justify-content:space-between;margin-top:8px}
 `;
 

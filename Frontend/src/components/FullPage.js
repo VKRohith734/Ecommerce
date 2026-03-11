@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const BACKEND_CART_API =
-  (process.env.REACT_APP_API_BASE || "https://ecommerce-1-zz8i.onrender.com") + "/api/cart";
+  (process.env.REACT_APP_API_URL || "http://localhost:3002") + "/api/cart";
 
 const ProductPage = () => {
   const { id } = useParams();

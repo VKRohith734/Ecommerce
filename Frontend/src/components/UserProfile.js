@@ -47,7 +47,8 @@ const UserProfile = ({ user, userId }) => {
       token ? "Token exists" : "No token found"
     );
 
-    fetch(`https://ecommerce-1-zz8i.onrender.com/api/user/${targetUserId}`, {
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
+    fetch(`${API_URL}/api/user/${targetUserId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

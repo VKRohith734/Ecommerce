@@ -43,10 +43,7 @@ export default function Navbar() {
     <>
       <div style={{ height: "70px" }}></div>
       <nav className="navbar navbar-expand-lg custom-navbar fixed-top bg-dark">
-        <div className="container">
-          <Link className="navbar-brand text-white" to="/">
-            ShopSphere
-          </Link>
+        <div className="container-fluid position-relative px-4">
           <button
             className="navbar-toggler mobile-menu-btn"
             type="button"
@@ -59,8 +56,15 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
+          <Link 
+            className="navbar-brand m-0" 
+            to="/"
+          >
+            KHAANSAAR
+          </Link>
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="nav-links navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="nav-links navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">
                   <i className="fas fa-info-circle"></i> About
@@ -112,7 +116,8 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <div className="d-flex gap-10px">
+
+            <div className="d-flex ms-auto gap-2 align-items-center">
               <form className="d-flex" role="search" onSubmit={handleSearch}>
                 <input
                   className="form-control me-2"
@@ -123,14 +128,14 @@ export default function Navbar() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <button
-                  className="btn btn-outline-success"
+                  className="btn btn-outline-dark text-white"
                   type="submit"
                   disabled={loading}
                 >
                   {loading ? "Searching..." : "Search"}
                 </button>
               </form>
-              {error && <div className="error-message">{error}</div>}
+              {error && <div className="error-message text-white">{error}</div>}
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
 :root{
-  --bg1: #071124;
-  --bg2: #0f2a44;
-  --accent: #00d0ff;
-  --glass: rgba(255,255,255,0.04);
-  --muted: rgba(255,255,255,0.65);
-  --card-border: rgba(255,255,255,0.03);
+  --bg1: #ffffff;
+  --bg2: #ffffff;
+  --accent: #000000;
+  --glass: rgba(0,0,0,0.04);
+  --muted: #666666;
+  --card-border: #000000;
 }
 
 /* Root */
@@ -12,8 +12,8 @@
   min-height: 100vh;
   padding: 2rem;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue";
-  background: linear-gradient(180deg, var(--bg1), var(--bg2));
-  color: #eaf6ff;
+  background: #ffffff;
+  color: #000000;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
 }
@@ -41,9 +41,9 @@
 .btn {
   padding: 8px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid #000000;
   background: transparent;
-  color: var(--accent);
+  color: #000000;
   cursor: pointer;
   font-weight: 700;
   font-size: 0.95rem;
@@ -51,15 +51,15 @@
 }
 .btn:hover { transform: translateY(-2px); }
 .btn.primary {
-  background: linear-gradient(90deg,#00c3ff,#3a7bd5);
-  color: #052b40;
+  background: #000000;
+  color: #ffffff;
   border: none;
-  box-shadow: 0 8px 30px rgba(58,123,213,0.14);
+  box-shadow: none;
 }
 .btn.ghost {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.04);
-  color: #cfefff;
+  border: 1px solid #000000;
+  color: #000000;
 }
 .btn:focus { outline: 3px solid rgba(0,208,255,0.14); outline-offset: 3px; }
 
@@ -82,7 +82,7 @@
   align-items: center;
   padding: 14px;
   border-radius: 14px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: #ffffff;
   border: 1px solid var(--card-border);
   box-shadow: 0 6px 18px rgba(2,8,23,0.6);
   transition: transform 220ms cubic-bezier(.2,.9,.3,1), box-shadow 220ms;
@@ -96,7 +96,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: #ffffff;
   padding: 6px;
   flex-shrink: 0;
 }
@@ -142,7 +142,7 @@
   padding: 6px;
   font-size: 0.95rem;
 }
-.link:hover { color: #fff; }
+.link:hover { color: #000000; }
 
 /* Footer / Checkout strip */
 .cp-footer {
@@ -221,14 +221,14 @@
 .btn-continue-shopping {
   padding: 12px 22px;
   border-radius: 12px;
-  background: linear-gradient(90deg, #00c3ff, #3a7bd5);
-  color: #042b40;
+  background: #000000;
+  color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: transform 200ms ease, box-shadow 200ms ease;
-  box-shadow: 0 10px 28px rgba(0, 180, 255, 0.25);
+  box-shadow: none;
 }
 
 .btn-continue-shopping:hover {

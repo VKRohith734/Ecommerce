@@ -1,23 +1,23 @@
 /* ProductPage.css - responsive, accessible, polished styles */
 
 :root{
-  --bg-start: #071124;
-  --bg-end: #0f2a44;
-  --card-bg: rgba(255,255,255,0.02);
-  --glass: rgba(255,255,255,0.04);
-  --accent: #00d0ff;
-  --accent-2: #22c55e;
-  --muted: rgba(255,255,255,0.65);
+  --bg-start: #ffffff;
+  --bg-end: #ffffff;
+  --card-bg: #ffffff;
+  --glass: rgba(0,0,0,0.04);
+  --accent: #000000;
+  --accent-2: #000000;
+  --muted: #666666;
   --max-width: 1200px;
   --radius: 12px;
-  --shadow: 0 8px 30px rgba(2,8,23,0.6);
+  --shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 /* Page background */
 .pp-page{
   min-height: 100vh;
   padding: 3rem 1rem;
-  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  background: #ffffff;
   color: #eaf6ff;
   display:flex;
   align-items:flex-start;
@@ -60,7 +60,7 @@
 
 /* Info section */
 .pp-infoSection{
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: #ffffff;
   padding: 28px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -68,7 +68,7 @@
 .pp-title{
   margin: 0 0 8px 0;
   font-size: 1.6rem;
-  color: #fff;
+  color: #000000;
 }
 .pp-category{ font-size: 0.95rem; color: var(--muted); margin-bottom: 8px; }
 .pp-price{
@@ -77,7 +77,7 @@
   margin: 8px 0 18px 0;
   font-weight: 700;
 }
-.pp-description{ color: #cfe7ff; line-height: 1.6; margin-bottom: 20px; }
+.pp-description{ color: #333333; line-height: 1.6; margin-bottom: 20px; }
 
 /* Controls */
 .pp-controls{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 18px; }
@@ -91,19 +91,19 @@
 }
 .pp-btn:focus{ outline: 3px solid rgba(0,208,255,0.12); outline-offset: 2px; }
 .pp-btn.primary{
-  background: linear-gradient(90deg,#00c3ff,#3a7bd5);
-  color: #042b40;
-  box-shadow: 0 10px 30px rgba(58,123,213,0.12);
+  background: #000000;
+  color: #ffffff;
+  box-shadow: none;
 }
 .pp-btn.secondary{
-  background: linear-gradient(90deg,#06b6d4,#0ea5e9);
-  color: white;
-  box-shadow: 0 8px 24px rgba(6,182,212,0.10);
+  background: #333333;
+  color: #ffffff;
+  box-shadow: none;
 }
 .pp-btn.ghost{
   background: transparent;
-  color: var(--muted);
-  border: 1px solid rgba(255,255,255,0.03);
+  color: #000000;
+  border: 1px solid #000000;
 }
 
 /* Meta */

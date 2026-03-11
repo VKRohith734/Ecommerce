@@ -1,9 +1,9 @@
 /* Navbar Styles */
 :root {
-  --primary-color: #4361ee;
-  --secondary-color: #3f37c9;
-  --dark-color: #212529;
-  --light-color: #f8f9fa;
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --dark-color: #ffffff;
+  --light-color: #000000;
   --transition-speed: 0.3s;
 }
 
@@ -26,10 +26,8 @@
 .navbar-brand {
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(to right, #4361ee, #3a0ca3);
-  -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: #ffffff !important;
   transition: all var(--transition-speed) ease;
 }
 
@@ -41,7 +39,7 @@
   position: relative;
   padding: 0.5rem 1rem;
   font-weight: 500;
-  color: var(--light-color) !important;
+  color: #ffffff !important;
   transition: all var(--transition-speed) ease;
 }
 
@@ -139,6 +137,7 @@
 
 .btn-primary:hover {
   background: var(--secondary-color);
+  color: #ffffff;
   transform: scale(1.05);
 }
 

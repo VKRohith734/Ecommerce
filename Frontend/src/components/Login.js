@@ -48,7 +48,7 @@ const Login = () => {
       <div className="login-container">
         <div className="login-card">
           <div className="login-header">
-            <h2>Welcome Back 👋</h2>
+            <h2>Welcome Back</h2>
             <p>
               Don't have an account?{" "}
               <Link to="/register" className="register-link">

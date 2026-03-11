@@ -73,15 +73,15 @@ footer {
 }
 
 .footer-section .social-app[href*="github"] i {
-  color: #333;
+  color: #000000;
 }
 
 .footer-section .social-app[href*=""] i {
-  color: #1da1f2;
+  color: #000000;
 }
 
 .footer-section .social-app[href*="instagram"] i {
-  color: #e4405f;
+  color: #000000;
 }
 
 @media (max-width: 768px) {
@@ -229,6 +229,6 @@ footer {
   }
 }
 .fa-heart{
-    color:red;
+    color:#000000;
     font-size: 1.2rem;
 }

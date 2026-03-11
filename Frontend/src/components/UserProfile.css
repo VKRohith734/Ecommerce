@@ -1,11 +1,11 @@
 /* UserProfile.css */
 :root {
-  --primary: #06ef86;
-  --primary-light: rgba(58, 134, 255, 0.1);
-  --text-dark: #2d3748;
-  --text-light: #718096;
-  --bg-light: #f7fafc;
-  --border: #e2e8f0;
+  --primary: #000000;
+  --primary-light: #f0f0f0;
+  --text-dark: #000000;
+  --text-light: #333333;
+  --bg-light: #ffffff;
+  --border: #dddddd;
   --white: #ffffff;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--primary-light), var(--white));
+  background: #ffffff;
   border-bottom: 1px solid var(--border);
   text-align: center;
 }
@@ -63,7 +63,7 @@ body{
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary), #8338ec);
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@ body{
   right: 8px;
   width: 16px;
   height: 16px;
-  background-color: #48bb78;
+  background-color: #000000;
   border: 2px solid var(--white);
   border-radius: 50%;
 }

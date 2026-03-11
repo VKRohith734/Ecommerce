@@ -13,7 +13,7 @@ const AuthContext = createContext();
 
 // Configure axios defaults
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "https://ecommerce-1-zz8i.onrender.com";
+axios.defaults.baseURL = process.env.REACT_APP_API_URL || "http://localhost:3002";
 
 export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(() => {
@@ -96,6 +96,10 @@ export const AuthProvider = ({ children }) => {
   }, [setAuthData]);
 
   const refreshLogin = useCallback(async () => {
+    // Prevent infinite loop by checking if we even have a token/user trying to refresh
+    const currentToken = localStorage.getItem("token");
+    if (!currentToken) return false;
+
   try {
     // send credentials so the server can read the refreshToken cookie
     const res = await axios.post('/api/auth/refresh', {}, { withCredentials: true });

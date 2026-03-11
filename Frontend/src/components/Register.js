@@ -64,8 +64,9 @@ function Register() {
     setIsLoading(true);
 
     try {
+      const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3002";
       const response = await axios.post(
-        "https://ecommerce-1-zz8i.onrender.com/api/auth/register/",
+        `${API_URL}/api/auth/register/`,
         {
           name: formData.name,
           email: formData.email,

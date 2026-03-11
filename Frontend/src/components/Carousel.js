@@ -34,6 +34,7 @@ const Carousel = () => {
                 <img
                   src={slide.image}
                   className="d-block w-100 img-fluid rounded"
+                  style={{ filter: "grayscale(100%)" }}
                   alt={`Slide ${index + 1}`}
                 />
                 <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-3 rounded">
@@ -118,7 +119,7 @@ const slides = [
 const styles = {
   page: {
     padding: "1rem 1rem 1rem 1rem",
-    background: "linear-gradient(to bottom right, #f0f4f8, #d9e2ec)",
+    background: "#ffffff",
     borderRadius: "16px",
     boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
     fontFamily: "Segoe UI, sans-serif",
